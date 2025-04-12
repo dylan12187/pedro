@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.contenedor {
+  margin-top: 50px;
+  padding: 20px;
+  animation: aparecer 2s ease-in-out;
+}
+
+h1 {
+  font-size: 4em;
+  text-shadow: 2px 2px 8px #00000090;
+  animation: latido 1.5s infinite;
+  font-family: 'Great Vibes', cursive;
+  color: #fff8f0;
+}
+
+.mensaje {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #ffeaff;
+  font-style: italic;
+  text-shadow: 1px 1px 3px #00000050;
+  animation: brillar 3s ease-in-out infinite;
+}
+
+.foto {
+  margin-top: 30px;
+  width: 500px;
+  height: auto;
+  border: 10px solid white;
+  border-radius: 25px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+  animation: aparecer 3s ease-in-out;
+  transition: transform 0.5s;
+}
+
+.foto:hover {
+  transform: scale(1.05);
+}
+
+.boton-flor {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background: linear-gradient(45deg, #a1c4fd, #c2e9fb);
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Comic Sans MS', cursive;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.boton-flor:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes latido {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes brillar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes aparecer {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.heart {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+  background-size: contain;
+  animation: flotar 8s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 0;
+  }
+}
+
+.big-heart {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+  background-size: contain;
+  animation: flotar-grande 10s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+@keyframes flotar-grande {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 0;
+  }
+}
+
